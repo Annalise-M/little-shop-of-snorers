@@ -1,4 +1,4 @@
-export const myData = [
+export const myDataArray = [
 
     {
         id: 'baby-sweep',
