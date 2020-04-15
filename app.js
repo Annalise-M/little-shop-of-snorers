@@ -2,7 +2,7 @@ import { productData } from './productData.js';
 import { pickRandomProduct } from './utils.js';
 
 // Need Id, Image, Name, Radio
-/* eslint-disable */
+
 
    
 const productId = document.getElementById('id');
@@ -61,7 +61,15 @@ const render = () => {
 };
 
 nextButton.addEventListener('click', () => {
+    while (productData.length < 25){
+        const user = document.querySelector('input:checked');
+        // productData.push();
+        console.log(user.value);
+    }
+
     render();
+    
+
 });
 
 render();

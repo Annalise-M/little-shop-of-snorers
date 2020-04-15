@@ -21,3 +21,7 @@ img{
 #resetButton{
     visibility: hidden;
 }
+
+input[type=radio]:checked + img {
+    border: salmon 50px transparent;
+}
