@@ -2,8 +2,6 @@ import { productData } from './productData.js';
 import { pickRandomProduct } from './utils.js';
 
 // Need Id, Image, Name, Radio
-
-
    
 const productId = document.getElementById('id');
 const productImg = document.querySelectorAll('img');
@@ -12,7 +10,8 @@ const productRadioTag = document.querySelectorAll('input');
 const nextButton = document.getElementById('nextButton');
 
 
-const gameCounter = 25;
+const gameCounter = 24;
+retun gameCounter();
     //keep track of total clicks, id's clicked and within a 25 click limit + reset after
 let timesClicked = 0;
 
@@ -61,13 +60,19 @@ const render = () => {
 };
 
 nextButton.addEventListener('click', () => {
-    while (productData.length < 25){
-        const user = document.querySelector('input:checked');
+    const user = document.querySelector('input:checked');
         // productData.push();
-        console.log(user.value);
-    }
+    console.log(user);
+    const gameCounter = 24;
 
+
+        //when this reaches 24 then reset => next page.
+        //create an array of chosen objects
+        // when picked then push user.id into object
+        // console.log(user.value);
+    
     render();
+    //reload with new random options
     
 
 });
