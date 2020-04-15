@@ -3,73 +3,73 @@ export const productData = [
     {
         id: 'baby-sweep',
         image: '../assets/sweep.png',
-        name: 'Sweeping Baby',
+        name: 'Sweeping Baby'
     },
 
     {
         id: 'shark-attack',
         image: '../assets/shark.jpg',
-        name: 'Shark Attack',
+        name: 'Shark Attack'
     },
 
     {
         id: 'tenticle',
         image: '../assets/usb.gif',
-        name: 'Tenticle Arm',
+        name: 'Tenticle Arm'
     },
     
     {
         id: 'bag',
         image: '../assets/bag.jpg',
-        name: 'Rolling R2D2',
+        name: 'Rolling R2D2'
     },
 
     {
         id: 'banana',
         image: '../assets/banana.jpg',
-        name: 'Banana slicer',
+        name: 'Banana slicer'
     },
 
     {
         id: 'bathroom',
         image: '../assets/bathroom.jpg',
-        name: 'ipod holding tp',
+        name: 'ipod holding tp'
     },
 
     {
         id: 'boots',
         image: '../assets/boots.jpg',
-        name: 'useless gumboots',
+        name: 'useless gumboots'
     },
 
     {
         id: 'breakfast',
         image: '../assets/breakfast.jpg',
-        name: 'all in one brekky',
+        name: 'all in one brekky'
     },
 
     {
         id: 'bubblegum',
         image: '../assets/bubblegum.jpg',
-        name: 'meatball bubblegum',
+        name: 'meatball bubblegum'
     },
 
     {
         id: 'chair',
         image: '../assets/chair.jpg',
-        name: 'inverted chair',
+        name: 'inverted chair'
     },
 
     {
         id: 'cthulhu',
         image: '../assets/cthulhu.jpg',
-        name: 'the great and powerful ctuhulu',
+        name: 'the great and powerful ctuhulu'
     },
 
     {
         id: 'dogduck',
-        image: '../assets/dogduck.jpg',
-        name: 'dogduck animal',
+        image: '../assets/dog-duck.jpg',
+        name: 'dogduck animal'
     },
 
     {
@@ -81,42 +81,42 @@ export const productData = [
     {
         id: 'pen',
         image: '../assets/pen.jpg',
-        name: 'pen cutlery',
+        name: 'pen cutlery'
     },
 
     {
         id: 'pet sweep',
         image: '../assets/pet-sweep.jpg',
-        name: 'pet-sweep',
+        name: 'pet-sweep'
     },
 
     {
         id: 'scissors',
         image: '../assets/scissors.jpg',
-        name: 'pizza slicer',
+        name: 'pizza slicer'
     },
 
     {
         id: 'tauntaun',
         image: '../assets/tauntaun.jpg',
-        name: 'tauntaun sleeping bag',
+        name: 'tauntaun sleeping bag'
     },
 
     {
         id: 'unicorne',
         image: '../assets/unicorn.jpg',
-        name: 'unicorn meat',
+        name: 'unicorn meat'
     },
     
     {
         id: 'water can',
         image: '../assets/water-can.jpg',
-        name: 'self watering can',
+        name: 'self watering can'
     },
 
     {
         id: 'wine glass',
         image: '../assets/wine-glass.jpg',
-        name: 'wine glass',
+        name: 'wine glass'
     }
 ];
