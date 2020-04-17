@@ -1,16 +1,13 @@
 import { productData } from './productData.js';
-import { pickRandomProduct } from './utils.js';
+import { pickRandomProduct, findById, incrementTimesSeen, incrementTimesPicked, addInitialVoteItem } from './utils.js';
 
 // Need Id, Image, Name, Radio
-
-/* eslint-disable */
    
 const productId = document.getElementById('id');
 const productImg = document.querySelectorAll('img');
 const productName = document.getElementById('name');
 const productRadioTag = document.querySelectorAll('input');
 const nextButton = document.getElementById('nextButton');
-
 
 const gameCounter = 24;
     //keep track of total clicks, id's clicked and within a 25 click limit + reset after
@@ -59,7 +56,15 @@ const render = () => {
     productImg2.src = product2.image;
     productImg3.src = product3.image; 
     //we need to increment the times seen for these three products, cause now we've seen them
-    // let incrementTimesSeen = 
+    incrementTimesSeen(addInitialVoteItem,incrementTimesPicked);
+
+    incrementTimesPicked(addInitialVoteItem, incrementTimesPicked);
+
+    // saveToLocalData();
+    // renderItem();
+
+
+
 };
 
 nextButton.addEventListener('click', () => {

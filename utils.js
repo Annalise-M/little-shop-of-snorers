@@ -48,7 +48,7 @@ export function incrementTimesSeen(id, productData) {
         voteItem = findById(productData, id);
     }
   
-    voteItem.timesViewed++;  
+    voteItem.timesSeen++;  
 }
   
 export function incrementTimesPicked(id, productData) {
