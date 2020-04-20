@@ -20,7 +20,7 @@ removeProductById(someId) {
     });
 
 
-getProductById(someId){
+getProductById(someId) {
     let productMatch;
 
     this.products.forEach(products => {
@@ -31,11 +31,11 @@ getProductById(someId){
     return productMatch;
 }
 
-hasAnyProducts(){
+hasAnyProducts() {
     return this.products.length;
 }
 
-getRandomProduct(){
+getRandomProduct() {
     const randomProductIndex = Math.floor(Math.random() * this.products.length);
     return this.products[randomProductIndex];
 }

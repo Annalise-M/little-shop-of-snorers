@@ -32,7 +32,7 @@ productImg3.src = product3.image;
 
 //for event click listener
 
-productRadioTag2.value = product2.id;
+
 productRadioTag3.value = product3.id;
  //creating blank array to track views and clicks
 const initializeNewProducts = () => {
@@ -41,8 +41,6 @@ const initializeNewProducts = () => {
     let product3 = pickRandomProduct(productData);
     
     
-    productRadioTag2.value = product2.id;
-    productRadioTag3.value = product3.id;
     
     while (product1.id === product2.id) {
         product2 = pickRandomProduct(productData);
@@ -51,24 +49,40 @@ const initializeNewProducts = () => {
         product3 = pickRandomProduct(productData);
     }
     
-    productImg2.src = product2.image;
-    productImg3.src = product3.image; 
-
     const product1Object = newProduct1;
     product1Object.textContent = product1Object.name;
     const product1Image = document.getElementById('productImg1');
     productImg1.src = product1.image;
     productRadioTag1.value = product1.id;
     const product1Name.textContent = product1Object.name;
+
+    const product2Object = newProduct2;
+    product2Object.textContent = product2Object.name;
+    const product2Image = document.getElementById('productImg2');
+    productImg2.src = product2.image;
+    productRadioTag2.value = product2.id;
+    const product2Name.textContent = product2Object.name;
+
+    const product3Object = newProduct3;
+    product3Object.textContent = product3Object.name;
+    const product3Image = document.getElementById('productImg3');
+    productImg3.src = product3.image; 
+    productRadioTag3.value = product3.id;
+    const product3Name.textContent = product3Object.name;
     
-    // //we need to increment the times seen for these three products, cause now we've seen them
+    let answersArray = [];
+    let allTimeArrayStorage = localStorage.getItem('allTimeAnswersArrayKey');
+    if (allTimeArrayStorage) {
+        allTimeArrayStorage = parsed_AllTimeArrayStorage;
+    }
+    else { allTimeArray = []; }
+        // //we need to increment the times seen for these three products, cause now we've seen them
     // incrementTimesSeen(productId, incrementTimesPicked);
     // incrementTimesPicked(productId, incrementTimesPicked);
     saveToLocalStorage(productData);
     localStorage.setItem('results', newResultsState);
     // gameCounter--;
 
-    
     saveToLocalData();
     renderItems();
     

@@ -25,3 +25,8 @@ img{
 input[type=radio]:checked + img {
     border: salmon 50px transparent;
 }
+
+canvas {
+    width: 75%;
+    height: 500px;
+  }
