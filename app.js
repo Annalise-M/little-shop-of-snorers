@@ -9,11 +9,9 @@ const productName = document.getElementById('name');
 const productRadioTag = document.querySelectorAll('input');
 const nextButton = document.getElementById('nextButton');
 
-const gameCounter = 24;
+const gameCounter = 25;
     //keep track of total clicks, id's clicked and within a 25 click limit + reset after
 let timesClicked = 0;
-
-// let productsSelected = 0;
 
 
 const product1 = pickRandomProduct(productData);
@@ -33,16 +31,16 @@ productImg2.src = product2.image;
 productImg3.src = product3.image;
 
 //for event click listener
-productRadioTag1.value = product1.id;
+
 productRadioTag2.value = product2.id;
 productRadioTag3.value = product3.id;
-
-const render = () => {
+ //creating blank array to track views and clicks
+const initializeNewProducts = () => {
     const product1 = pickRandomProduct(productData);
     let product2 = pickRandomProduct(productData);
     let product3 = pickRandomProduct(productData);
     
-    productRadioTag1.value = product1.id;
+    
     productRadioTag2.value = product2.id;
     productRadioTag3.value = product3.id;
     
@@ -52,34 +50,56 @@ const render = () => {
     while (product3.id === product2.id || product3.id === product1.id) {
         product3 = pickRandomProduct(productData);
     }
-    productImg1.src = product1.image;
+    
     productImg2.src = product2.image;
     productImg3.src = product3.image; 
-    //we need to increment the times seen for these three products, cause now we've seen them
-    incrementTimesSeen(addInitialVoteItem,incrementTimesPicked);
 
-    incrementTimesPicked(addInitialVoteItem, incrementTimesPicked);
+    const product1Object = newProduct1;
+    product1Object.textContent = product1Object.name;
+    const product1Image = document.getElementById('productImg1');
+    productImg1.src = product1.image;
+    productRadioTag1.value = product1.id;
+    const product1Name.textContent = product1Object.name;
+    
+    // //we need to increment the times seen for these three products, cause now we've seen them
+    // incrementTimesSeen(productId, incrementTimesPicked);
+    // incrementTimesPicked(productId, incrementTimesPicked);
+    saveToLocalStorage(productData);
+    localStorage.setItem('results', newResultsState);
+    // gameCounter--;
 
-    // saveToLocalData();
-    // renderItem();
-
-
-
+    
+    saveToLocalData();
+    renderItems();
+    
 };
+
+initializeNewProducts();
 
 nextButton.addEventListener('click', () => {
     const selectedRadioButton = document.querySelector('input[type="radio"]:checked');
     const productId = selectedRadioButton.value;
-    // *console.log(productId);
+    console.log(productId);
+    renderProductsResults();
     //now we need to increment this id
     //then we need to stringify the array then store in local storage
     //then we need to create 3 more products  /
     
 
 });
+//putting + tracking user info into local storage
 
-render();
+export function saveUser(user) {
+    const json = JSON.stringify(user);
+    localStorage.setItem('user', json);
+}
 
+export function getUser() {
+    const json = localStorage.getItem('user');
+    if (!json) return null;
+    const user = JSON.parse(json);
+    return user;
+}
 
 // myRadioTags.forEach((radioTag)); {
 //     radioTag.addEventListener('click', (event)) 
