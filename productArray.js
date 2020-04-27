@@ -1,42 +1,42 @@
-import { getProducts } from "./utils";
+// import { getProducts } from "./utils";
 
-export class productsArray {
-    constructor(products){
-        this.products = products.slice();
-    }
-}
-
-getProducts() {
-    return this.products;
-}
-
-// then remove from the array
-
-removeProductById(someId) {
-    this.products.forEach((products, i) => {
-        if (someId === products.id){
-            this.products.splice(i, 1);
-        }
-    });
+// export class productsArray {
+//     constructor(products){
+//         this.products = products.slice();
+//     }
 
 
-getProductById(someId) {
-    let productMatch;
+// getProducts() {
+//     return this.products;
+// };
 
-    this.products.forEach(products => {
-        if (someId === products.id){
-            productMatch = true;
-        }
-    });
-    return productMatch;
-}
+// // then remove from the array
 
-hasAnyProducts() {
-    return this.products.length;
-}
+// removeProductById(someId) {
+//     this.products.forEach((products, i) => {
+//         if (someId === products.id){
+//             this.products.splice(i, 1);
+//         }
+//     });
 
-getRandomProduct() {
-    const randomProductIndex = Math.floor(Math.random() * this.products.length);
-    return this.products[randomProductIndex];
-}
-}
+
+// getProductById(someId) {
+//     let productMatch;
+
+//     this.products.forEach(products => {
+//         if (someId === products.id){
+//             productMatch = true;
+//         }
+//     });
+//     return productMatch;
+// }
+
+// hasAnyProducts() {
+//     return this.products.length;
+// }
+
+// getRandomProduct() {
+//     const randomProductIndex = Math.floor(Math.random() * this.products.length);
+//     return this.products[randomProductIndex];
+// }
+// };
