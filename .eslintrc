@@ -1,20 +1,22 @@
-// {
-//   "extends": "eslint:recommended",
-//   "parserOptions": {
-//     "ecmaVersion": 8,
-//     "ecmaFeatures": {
-//       "impliedStrict": true
-//     },
-//     "sourceType": "module"
-//   },
-//   "env": {
-//     "browser": true,
-//     "es6": true,
-//     "jest": true
-//   },
-//   "globals": {
-    
+/* eslint-disable */
 
+{
+  "extends": "eslint:recommended",
+  "parserOptions": {
+    "ecmaVersion": 8,
+    "ecmaFeatures": {
+      "impliedStrict": true
+    },
+    "sourceType": "module"
+  },
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest": true
+  },
+  "globals": {
+    
+// Below is my chart import => I need to check out what's going on here...
 //     const ctx = document.getElementById('chart').getContext('2d');
 
 //     myChart.data.datasets[0].data = [100, 200, 300, 50, 10];
@@ -89,4 +91,5 @@
 //     ],
 //     "array-bracket-spacing": "error"
 //   }
-// }
+// ,}
+
