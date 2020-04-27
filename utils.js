@@ -1,3 +1,4 @@
+/* eslint-disable */
 
 import { productData } from './productData.js';
 
@@ -58,8 +59,8 @@ function seedProductsIntoLocalStorage(){
     if (!productsAlreadyExist){
         const stringyProducts = JSON.stringify(productsData);
         localStorage.setItem('results', stringyProducts);
-    };
-};
+    }
+}
 
 
 export function getProducts(){

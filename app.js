@@ -1,3 +1,6 @@
+/* eslint-disable */
+
+
 import { productData } from './productData.js';
 import { pickRandomProduct, findById, incrementTimesSeen, incrementTimesPicked, addInitialVoteItem } from './utils.js';
 
@@ -10,8 +13,8 @@ const productRadioTag = document.querySelectorAll('input');
 const nextButton = document.getElementById('nextButton');
 
 const gameCounter = 25;
-    //keep track of total clicks, id's clicked and within a 25 click limit + reset after
 let timesClicked = 0;
+//keep track of total clicks, id's clicked and within a 25 click limit + reset after
 
 const product1 = pickRandomProduct(productData);
 const product2 = pickRandomProduct(productData);
