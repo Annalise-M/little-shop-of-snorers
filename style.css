@@ -1,0 +1,32 @@
+body{
+    background-color: rgb(213, 213, 248);
+}
+
+img{
+    height: 250px;
+    width: 250px;
+    border: black;
+    border-radius: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+#button{
+    display: flex;
+    justify-content: center;
+}
+
+#resetButton{
+    visibility: hidden;
+}
+
+input[type=radio]:checked + img {
+    border: salmon 50px transparent;
+}
+
+canvas {
+    width: 75%;
+    height: 500px;
+  }
