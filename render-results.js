@@ -1,4 +1,4 @@
-import { getProducts, findById } from "./utils.js";
+// import { getProducts, findById } from './utils.js';
 
 export function renderResults(selectedProducts, products){
     const tr = document.createElement('tr');
