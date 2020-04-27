@@ -11,6 +11,6 @@ export function renderResults(selectedProducts, products){
     const votesCell = document.createElement('td');
     votesCell.textContent = selectedProducts.votes;
     tr.appendChild(votesCell);
-
+ 
     return tr;
 }
